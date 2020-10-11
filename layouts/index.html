@@ -105,8 +105,8 @@
             {{ range .funfact_item }}
             <li class="counter-item">
               <i class="{{ .icon }}"></i>
-              <h4 class="count" data-count="{{ .count }}">0</h4>
-              <span>{{ .name | markdownify }}</span>
+              <h4 class="count">{{ .name | markdownify }}</h4>
+              <span>{{ .description }}</span>
             </li>
             {{ end }}
           </ul>
@@ -120,8 +120,8 @@
               <i class="ion-quote"></i>
               <p>"{{ .content | markdownify }}"</p>
               <div class="user">
-                <img src="{{ .image | relURL }}" alt="client">
-                <p><span>{{ .name | markdownify }}</span> {{ .designation | markdownify }}</p>
+                <!-- <img src="{{ .image | relURL }}" alt="client"> -->
+                <p><span>{{ .name | markdownify }}</span></p>
               </div>
             </div>
             {{ end }}
